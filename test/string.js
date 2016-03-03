@@ -316,6 +316,23 @@ describe('string', function () {
         });
     });
 
+    describe('#set', function () {
+
+        it('should validate set', function (done) {
+
+            var t = Joi.string().set();
+            t.validate('555', function (err, value) {
+
+                expect(err.message).to.equal('"value" is invalid');
+
+                Helper.validate(t, [
+                    ['5553', true],
+                    ['555', false]
+                ], done);
+            });
+        });
+    });
+
     describe('#length', function () {
 
         it('throws when limit is not a number', function (done) {
