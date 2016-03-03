@@ -333,6 +333,23 @@ describe('string', function () {
         });
     });
 
+    describe('#sp', function () {
+
+        it('should validate split', function (done) {
+
+            var t = Joi.string().sp();
+            t.validate('aaaa', function (err, value) {
+
+                expect(err.message).to.equal('"value" is invalid');
+
+                Helper.validate(t, [
+                    ['aaaa bbbb', true],
+                    ['aaaa', false]
+                ], done);
+            });
+        });
+    });
+
     describe('#length', function () {
 
         it('throws when limit is not a number', function (done) {
