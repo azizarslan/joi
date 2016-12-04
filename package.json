@@ -14,7 +14,7 @@
     "npm": ">=2.0.0"
   },
   "dependencies": {
-    "hoek": "2.x.x",
+    "hoek": "eniz/hoek#ignore-crypto",
     "topo": "1.x.x",
     "isemail": "1.x.x",
     "moment": "2.x.x"
