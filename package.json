@@ -26,8 +26,7 @@
   },
   "browser": {
     "moment": false,
-    "isemail": false,
-    "buffer": false
+    "isemail": false
   },
   "scripts": {
     "test": "lab -t 100 -a code -L",
