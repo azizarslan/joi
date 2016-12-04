@@ -16,7 +16,7 @@
   "dependencies": {
     "hoek": "eniz/hoek#ignore-crypto",
     "topo": "1.x.x",
-    "isemail": "1.x.x",
+    "isemail": "eniz/isemail#ignore-dns",
     "moment": "2.x.x"
   },
   "devDependencies": {
