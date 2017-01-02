@@ -316,6 +316,24 @@ describe('string', function () {
         });
     });
 
+    describe('#cvc', function () {
+
+        it('should validate cvc', function (done) {
+
+            var t = Joi.string().cvc();
+            t.validate('00', function (err, value) {
+
+                expect(err.message).to.equal('"value" must be minimum 3 characters long.');
+
+                Helper.validate(t, [
+                    ['123', true],
+                    ['1234', true],
+                    ['12345', false]
+                ], done);
+            });
+        });
+    });
+
     describe('#set', function () {
 
         it('should validate set', function (done) {
