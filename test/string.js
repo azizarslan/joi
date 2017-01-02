@@ -302,6 +302,10 @@ describe('string', function () {
                     ['6011601160116611', true], // discover
                     ['3566002020360505', true], // jbc
                     ['3530111333300000', true], // jbc
+                    ['6271136264806203568', true], // unionpay
+                    ['6236265930072952775', true], // unionpay
+                    ['6204679475679144515', true], // unionpay
+                    ['6216657720782466507', true], // unionpay
                     ['5105105105105100', true], // mastercard
                     ['5555555555554444', true], // mastercard
                     ['5431111111111111', true], // mastercard
