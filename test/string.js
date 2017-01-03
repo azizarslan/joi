@@ -332,7 +332,10 @@ describe('string', function () {
                 Helper.validate(t, [
                     ['123', true],
                     ['1234', true],
-                    ['12345', false]
+                    ['12345', false],
+                    ['12', false],
+                    ['12e', false],
+                    ['', false]
                 ], done);
             });
         });
