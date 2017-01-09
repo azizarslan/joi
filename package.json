@@ -26,7 +26,8 @@
   },
   "browser": {
     "moment": false,
-    "net": false
+    "net": false,
+    "buffer": false
   },
   "scripts": {
     "test": "lab -t 100 -a code -L",
