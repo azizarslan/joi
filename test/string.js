@@ -341,6 +341,33 @@ describe('string', function () {
         });
     });
 
+    describe('#phoneNumber', function () {
+
+        it('should validate phoneNumber', function (done) {
+
+            var t = Joi.string().phoneNumber();
+            t.validate('abc', function (err, value) {
+
+                expect(err.message).to.equal('"value" must be a valid phone number');
+
+                Helper.validate(t, [
+                    ['+905545400260', true],
+                    ['+ 61 284 172 312', true],
+                    ['+ 32 78 48 32 63', true],
+                    ['+ 358 942450346', true],
+                    ['+ 33 9 75 18 63 78', true],
+                    ['+ 1 917 624 9013', true],
+                    ['02122123456', true],
+                    ['2123456', true],
+                    ['12345', true],
+                    ['', false],
+                    ['0114152198', true],
+                    ['123', false]
+                ], done);
+            });
+        });
+    });
+
     describe('#set', function () {
 
         it('should validate set', function (done) {
