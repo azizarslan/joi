@@ -26,6 +26,7 @@
   },
   "browser": {
     "moment": false,
+    "lodash": false,
     "net": false
   },
   "scripts": {
